@@ -75,32 +75,74 @@
             padding: 0 1.5rem;
         }
 
+        /* BLOK JUDUL UTAMA (BERDIRI SENDIRI) */
         .article-header {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 1.5rem;
         }
 
         .article-header h1 {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             color: #111827;
             font-family: 'Georgia', serif;
             line-height: 1.4;
-            margin-bottom: 1rem;
         }
 
-        .meta-info {
-            color: var(--text-muted);
+        /* BLOK KOLOM PROFIL TERPISAH (AUTHOR CARD) */
+        .profile-container {
+            display: flex;
+            align-items: center;
+            background-color: var(--light-bg);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            gap: 1.5rem;
+        }
+
+        .profile-avatar-box {
+            flex-shrink: 0;
+        }
+
+        .profile-img {
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-maroon);
+            background-color: #e2e8f0;
+        }
+
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .profile-info .name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-maroon);
+            margin-bottom: 0.2rem;
+        }
+
+        .profile-info .meta-item {
             font-size: 0.95rem;
-            font-style: italic;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 1rem;
+            color: var(--text-muted);
+        }
+
+        .profile-info .meta-label {
+            font-weight: 600;
+            color: var(--text-dark);
         }
 
         /* ARTICLE BODY CONTENT */
         .article-body h2 {
             font-family: 'Georgia', serif;
             color: var(--primary-maroon);
-            font-size: 1.5rem;
-            margin: 2rem 0 0.75rem 0;
+            font-size: 1.6rem;
+            margin: 2.5rem 0 0.85rem 0;
         }
 
         .article-body p {
@@ -132,6 +174,7 @@
 
         .documentation-image {
             width: 100%;
+            max-width: 650px;
             max-height: 450px;
             object-fit: cover;
             border-radius: 8px;
@@ -148,7 +191,12 @@
         /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             .article-header h1 {
-                font-size: 1.8rem;
+                font-size: 1.9rem;
+            }
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem 1rem;
             }
             header {
                 flex-direction: column;
@@ -178,11 +226,20 @@
     <main class="article-container">
         
         <header class="article-header">
-            <h1>Mewujudkan Nilai Amor Concervis: Sosialisasi Edukatif Bahaya Game Online di Kalangan Anak-Anak</h1>
-            <div class="meta-info">
-                Ditulis oleh: <strong>Arya</strong> | NIM: <strong>20250040045</strong>
-            </div>
+            <h1>Mewujudkan Nilai Amor Concervis Melalui Aksi Nyata: Sosialisasi Edukatif Bahaya Game Online di Kalangan Anak-Anak</h1>
         </header>
+            
+        <div class="profile-container">
+            <div class="profile-avatar-box">
+                <img src="profil.jpg" alt="Foto Profil Arya" class="profile-img">
+            </div>
+            <div class="profile-info">
+                <div class="name">Arya</div>
+                <div class="meta-item"><span class="meta-label">NIM:</span> 20250040045</div>
+                <div class="meta-item"><span class="meta-label">Program Studi:</span> Teknik Informatika</div>
+                <div class="meta-item"><span class="meta-label">Mata Kuliah:</span> Kenusaputraan</div>
+            </div>
+        </div>
 
         <section class="article-body">
             
@@ -215,14 +272,12 @@
             </p>
 
             <h2>Refleksi Emosi dan Pelajaran Berharga</h2>
+            
             <div class="documentation-container">
-            <img src="refleksi.jpg" alt="Dokumentasi Refleksi Kegiatan" class="documentation-image">
-            <div class="image-caption">Gambar 2: dokumentasi kegiatan.</div>
+                <img src="refleksi.jpg" alt="Dokumentasi Refleksi Kegiatan" class="documentation-image">
+                <div class="image-caption">Gambar 2: Momen interaksi hangat bersama anak-anak di akhir sesi sosialisasi.</div>
             </div>
 
-            <p>
-            Melalui pengalaman langsung di lapangan ini, ada banyak sekali gelombang emosi serta pelajaran hidup yang sangat berharga yang berhasil saya petik...
-            </p>
             <p>
                 Melalui pengalaman langsung di lapangan ini, ada banyak sekali gelombang emosi serta pelajaran hidup yang sangat berharga yang berhasil saya petik. Pada awalnya, ada rasa kekhawatiran apakah pesan yang saya bawa dapat diterima dengan baik oleh anak-anak atau justru diabaikan. Namun, ketika melihat binar mata mereka yang penuh rasa ingin tahu serta senyum tulus yang terkembang di akhir sesi, rasa lelah dan cemas tersebut seketika sirna, berganti menjadi sebuah kepuasan batin yang luar biasa mendalam. Saya menyadari bahwa kepedulian sosial tidak melulu membutuhkan pergerakan dalam skala masif atau pendanaan yang besar.
             </p>
