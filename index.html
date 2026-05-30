@@ -38,7 +38,17 @@
             align-items: center;
             border-bottom: 4px solid var(--dark-maroon);
         }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem; /* Jarak antara gambar logo dan teks nama kampus */
+        }
 
+        .campus-logo {
+            height: 40px; /* Mengatur tinggi logo agar pas dengan bar navigasi */
+            width: auto;
+            object-fit: contain;
+        }
         .logo-text {
             font-weight: bold;
             font-size: 1.2rem;
@@ -212,7 +222,10 @@
 <body>
 
     <header>
-        <div class="logo-text">UNIVERSITAS NUSA PUTRA</div>
+        <div class="logo-container">
+            <img src="kampus.png" alt="Logo Universitas Nusa Putra" class="campus-logo">
+            <div class="logo-text">UNIVERSITAS NUSA PUTRA</div>
+        </div>
         <nav>
             <a href="#">Home</a>
             <a href="https://nusaputra.ac.id" target="_blank">Web Kampus</a>
